@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import Navbar from '../components/Navbar'
 import MobNavbar from '../components/MobNavbar'
-import Hero from '../components/Hero';
-//import HeroStatic from '../components/HeroStatic';
+//import Hero from '../components/Hero';
+import HeroStatic from '../components/HeroStatic';
 //import HeroAnimated from '../components/HeroAnimated';
 import FeaturesData from '../components/FeaturesData';
 import { FeaturesDataOne, FeaturesDataTwo, FeaturesDataThree } from '../components/FeaturesData/Data';
@@ -30,8 +30,8 @@ const Home = () => {
         <>
       <Navbar toggleNav ={toggleNav} />
       <MobNavbar isOpen={isOpen} toggleNav ={toggleNav} /> 
-       <Hero /> 
-      {/* <HeroStatic /> */}
+       {/* <Hero /> */} 
+      <HeroStatic /> 
       {/* <HeroAnimated /> */}
       {/* Spread out the objects from Data.js */}
       <FeaturesData {...FeaturesDataOne} /> 
