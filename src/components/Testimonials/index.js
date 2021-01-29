@@ -1,40 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { TestimonialWrapper, TestimonialTitle, PersonQuote, PersonTitle, TestimonialContainer, TestimonialContent, PersonImage, PersonName, IconRight, IconLeft } from './TestimonialComponents';
+import users from './data';
 
 //TESTIMONIALS component
 
-//users array
-const users = [
-    {
-      id: 1,
-      image:
-        'https://svgshare.com/i/Svv.svg',
-      name: 'rolanda jones',
-      title: 'project manager',
-      quote:
-        'Aenean eu magna ut quam rhoncus pretium praesent sit amet lorem nec leo porta malesuada. Phasellus vehicula ex eget nunc vehicula.',
-    },
-    {
-      id: 2,
-      image:
-        'https://svgshare.com/i/SuS.svg',
-      name: 'james wheeler',
-      title: 'business owner',
-      quote:
-        'Aenean eu magna ut quam rhoncus pretium praesent sit amet lorem nec leo porta malesuada. Phasellus vehicula ex eget nunc vehicula.',
-    },
-    {
-      id: 3,
-      image:
-        'https://svgshare.com/i/Sw6.svg',
-      name: 'john smith',
-      title: 'website owner',
-      quote:
-        'Aenean eu magna ut quam rhoncus pretium praesent sit amet lorem nec leo porta malesuada. Phasellus vehicula ex eget nunc vehicula. Sit amet lorem nec leo porta malesuada.',
-    }
-  ];
-  
-  
+/* see the carousel info here: https://www.npmjs.com/package/pure-react-carousel */
+ 
 const Testimonials = () => {
     //people array
     const [people, setPeople] = useState(users)

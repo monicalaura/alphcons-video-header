@@ -178,7 +178,6 @@ export const  ImgTextTitle = styled.h1`
 //Portfolio project item
 export const ProjectItem = styled.article`
     position:relative;
-    //background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
     background:${(props) => props.theme.colors.dark };
     color: #ffffff;
     overflow:hidden;

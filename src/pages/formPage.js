@@ -6,10 +6,11 @@ import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import AccountContext from '../AccountContext';
 
+
 //see framer-motion here: https://github.com/framer/motion
 
 
-//General Form page
+//General Form page, for login/register
 
 // form page  styled components
 export const FormPageContainer = styled.div`
@@ -35,7 +36,14 @@ export const FormContainer = styled.div`
     -webkit-box-shadow: 0px 10px 13px -9px #000000, 4px 4px 6px 4px rgba(2,4,7,0);; 
     box-shadow: 0px 10px 13px -9px #000000, 4px 4px 6px 4px rgba(2,4,7,0);
 `
-
+export const FieldsWrapper = styled.div`
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    margin-top: ${({margin}) => (margin ? '4rem' : '3rem')};
+    padding-bottom:2rem;
+`
 //the container of the top shape 
 export const TopAnimWrapper = styled.div`
     display:flex;
@@ -62,17 +70,17 @@ export const TopAnim = styled(motion.div)`
     background: ${(props) => props.theme.colors.darkGreen };
 
 `
-
+//top text container
 export const TopTextContainer = styled.div`
     display:flex;
     flex-direction:column;
     align-items:flex-start;
     justify-content:flex-start;
     margin-left:1rem;
-    margin-top:-12rem;
+    margin-top:-3rem;
     width:100%;
 `
-
+//top text
 export const TopText = styled.h2`
     font-size: ${(props) => props.theme.fontSizes.medium};
     color:${(props) => props.theme.colors.light };
@@ -102,13 +110,6 @@ export const TopTextLink = styled(LinkRouter)`
         }
 `
 
-//inner form wrapper
-export const FormWrapper = styled.form`
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    margin-top:5.5rem;
-`
 
 //toggle motion animation values on different states(expanded, collapsed)
 const topAnimVariants = {
@@ -187,6 +188,7 @@ const contextValue = {switchToLogin, switchToRegister}
                </TopAnimWrapper>
               {active === "login" && 
                <TopTextContainer>
+                   {/* here you customize the top text of the login form */}
                <TopText>Login</TopText>
                <TopTextSmall>Please log in to continue</TopTextSmall>
                <TopTextLink to = "/">Back Home</TopTextLink>
@@ -195,15 +197,17 @@ const contextValue = {switchToLogin, switchToRegister}
 
               {active === "register" && 
                <TopTextContainer>
+                   {/* here you customize the top text of the resiter form */}
                <TopText>Register</TopText>
                <TopTextSmall>Please register to continue</TopTextSmall>
                <TopTextLink to = "/">Back Home</TopTextLink>
                </TopTextContainer>
                  }
-                <FormWrapper>
+               <FieldsWrapper>
                 {active === "login" && <Login />}
                 {active === "register" && <Register />}
-                </FormWrapper>
+                </FieldsWrapper>
+                
               </FormContainer>      
         </FormPageContainer>
         </AccountContext.Provider>

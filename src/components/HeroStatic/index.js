@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import HeroImg from './../../assets/hero.svg';
-import {Button} from '../ButtonComponent';
-import { HeroStaticColumn, HeroStaticRow, HeroStaticWrapper, HeroStaticContainer, Subtitle, TextContainer, Title, TopText, HeroBtnContainer, ArrowDown, ArrowForward, ImgContainer, Image } from './HeroStaticComponents';
+import { HeroStaticColumn, HeroStaticRow, HeroStaticWrapper, HeroStaticContainer, Subtitle, TextContainer, Title, TopText, StaticHeroBtn, HeroBtnContainer, ArrowDown, ArrowForward, ImgContainer, Image } from './HeroStaticComponents';
 
 
 const HeroStatic = () => {
@@ -14,7 +13,7 @@ const HeroStatic = () => {
     }
 
     return (
-        <>
+        
          <HeroStaticWrapper>
              <HeroStaticContainer>
              <HeroStaticRow>
@@ -25,11 +24,11 @@ const HeroStatic = () => {
                          <Subtitle>Web design, digital marketing and custom web applications</Subtitle>
                      </TextContainer>
                      <HeroBtnContainer>
-                    <Button to='e-marketing' 
+                    <StaticHeroBtn to='e-marketing' 
                             onMouseEnter={handleHover} 
                             onMouseLeave={handleHover}
                   /*  here you customize the button props (see ButtonComponent)  */    
-                            primary large start
+                            
                   /* here you customize the values of smooth scroll for button  */   
                             smooth={true} 
                             spy={true}
@@ -37,7 +36,7 @@ const HeroStatic = () => {
                             duration={700}>
                       {/* toggle between the 2 arrows */}
                        More info {hover ? <ArrowDown /> : <ArrowForward />} 
-                    </Button>
+                    </StaticHeroBtn>
                     
                 </HeroBtnContainer>
                  </HeroStaticColumn>
@@ -49,7 +48,7 @@ const HeroStatic = () => {
              </HeroStaticRow>
              </HeroStaticContainer> 
          </HeroStaticWrapper>   
-        </>
+        
     )
 }
 

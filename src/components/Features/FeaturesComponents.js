@@ -2,30 +2,29 @@ import styled from 'styled-components';
 
 //The styled components for the 3 section of Features 
 
-//Features wrapper
-export const FeaturesDataWrapper = styled.div`
-    color: ${(props) => props.theme.colors.light };
-    background: ${({lightBcg}) => (lightBcg ? '#ffffff' : '#010203')};
-
-    @media screen and (max-width:768px){
-        padding: 2rem 0;
-    }
+//Features general wrapper
+export const FeaturesWrapper = styled.section`
+    width:100%;
+    margin-bottom:3rem;
 `
 
-//Features container
+
+//Feature container
 export const FeaturesDataContainer = styled.div`
     display:grid;
     justify-content:center;
     margin-right:auto;
     margin-left:auto;
     padding: 0 2rem;
-    height:750px;
+    height:650px;
     width:100%;
-    max-width:1300px;
     z-index:1;
+    // lightBcg prop can be true/false, see data.js
+    background: ${({lightBcg}) => (lightBcg ? '#ffffff' : '#010203')};
 
     @media screen and (max-width:768px){
-        padding:0 1rem
+        //padding:0 1rem
+        padding: 2rem 0;
     }
 
 `
@@ -34,18 +33,19 @@ export const FeaturesDataRow = styled.div`
     display:grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items:center;
+    max-width:1300px;
     /* if the prop imgFirst is true, col2 (the img container) comes first. 
-    You can modify the true/false value in Data.js, for a different display */
+    You can modify the true/false value in data.js, for a different display */
     grid-template-areas: ${({imgFirst}) => (imgFirst ? `'col2 col1'`: `'col1 col2'`)};
+    margin-top:2rem;
     
-
     @media screen and (max-width:768px){
         display:flex;
         flex-direction: ${({imgFirst}) => (imgFirst ? 'column-reverse': 'column')};
 
     }
 `
-//Features column 1
+//Feature column 1
 export const Col1 = styled.div`
     padding: 0 1.2rem;
     margin-bottom:1.2rem;

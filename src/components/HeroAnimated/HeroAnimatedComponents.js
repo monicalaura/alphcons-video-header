@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link as LinkScroll} from 'react-scroll';
 import { MdArrowDownward, MdArrowForward } from "react-icons/md";
 import BckImg from '../../assets/hero-anim.png'
 import {motion} from 'framer-motion';
@@ -76,13 +77,38 @@ export const HeroAnimText = styled(motion.p)`
    
 `
 
-//more info button
+//more info button container
 export const HeroAnimBtnContainer = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
     margin-top:2.5rem;
 
+`
+
+//more info button
+
+//hero btn
+export const AnimatedHeroBtn = styled(LinkScroll)`
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    background:${(props) => props.theme.colors.darkGreen};
+    color:${(props) => props.theme.colors.light};
+    margin-top: ${({margin}) => (margin ? '2.7rem' : '1.7rem')};
+    margin-bottom:1rem;
+    padding:1.1rem 2.2rem;
+    border-radius:${(props) => props.theme.radius.halfRound};
+    font-size: ${(props) => props.theme.fontSizes.small};
+    transition:${(props) => props.theme.transitions.inOut};
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    &:hover{
+        background: ${(props) => props.theme.colors.midGreen};
+        color:${(props) => props.theme.colors.dark};
+    }
 `
 //arrow down icon
 export const ArrowDown = styled(MdArrowDownward)`

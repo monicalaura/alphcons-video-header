@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {FaUserAlt} from 'react-icons/fa';
 import {HiOutlineMail} from "react-icons/hi";
 import {BiMessageAltDetail} from "react-icons/bi";
-import {Button} from '../ButtonComponent'
 import BckImg from '../../assets/contact.jpg'
 
 //CONTACT component
@@ -44,7 +43,7 @@ export const ContactWrapper = styled.section`
 
 `
 // Contact form container
-export const ContactContainer = styled.div`
+export const ContactContainer = styled.form`
     display:flex;
     flex-direction:column;
     width:50%;
@@ -98,6 +97,7 @@ export const InputContact = styled.input`
     border-bottom: 1px solid ${(props) => props.theme.colors.light};
     padding: 0.8rem;
     margin:0 auto;
+    margin-top:.5rem;
     margin-bottom:1.5rem;
     transition:${(props) => props.theme.transitions.inOut};
 
@@ -149,13 +149,35 @@ export const TextareaContact = styled.textarea`
     `
 
 //Contact Submit Button 
-export const ContactButton = styled(Button)`
-    width:60%;
+export const ContactButton = styled.button`
+    display:flex;
+    justify-content:center;
     margin:0 auto;
+    width:60%;
+    background:${(props) => props.theme.colors.darkGreen};
+    color:${(props) => props.theme.colors.light};
+    padding:1.1rem 2.2rem;
+    font-size: ${(props) => props.theme.fontSizes.smaller};
+    transition:${(props) => props.theme.transitions.inOut};
+    border:none;
+    outline:none;
+    cursor:pointer;
     margin-top: ${({margin}) => (margin ? '2.7rem' : '1.7rem')};
     margin-bottom:1rem;
     border-radius:${(props) => props.theme.radius.halfRound};
     font-size: ${(props) => props.theme.fontSizes.smaller};
-    background: ${(props) => props.theme.colors.darkGreen};
+    
+    &:hover{
+        background: ${(props) => props.theme.colors.midGreen};
+        color:${(props) => props.theme.colors.dark};
+    }
 
+    @media screen and (max-width: 768px) {
+        font-size: ${(props) => props.theme.fontSizes.smallest};
+  }
+
+    @media screen and (max-width:600px){
+        padding:.8rem 1.3rem;
+        
+    }
 `

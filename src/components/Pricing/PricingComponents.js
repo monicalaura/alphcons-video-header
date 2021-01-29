@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import { Link as LinkRouter } from 'react-router-dom';
 import { Button } from '../ButtonComponent'
+import {RiSendPlane2Line} from 'react-icons/ri';
+import { IoAirplaneOutline } from "react-icons/io5";
+import { IoRocketOutline } from "react-icons/io5";
 
 //PRICING styled components
 
@@ -55,7 +57,7 @@ export const PricingTitle = styled.h1`
     }
 `
 //Pricing card
-export const PricingCard = styled(LinkRouter)`
+export const PricingCard = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -70,8 +72,22 @@ export const PricingCard = styled(LinkRouter)`
     &:hover {
         transform: scale(1.05);
             }
-
 `
+
+//Pricing icons
+export const IconEssential = styled(RiSendPlane2Line)`
+  color: ${(props) => props.theme.colors.light };
+  font-size:4rem;
+`
+export const IconPremium = styled(IoAirplaneOutline)`
+  color: ${(props) => props.theme.colors.light };
+  font-size:4rem;
+`
+export const IconTeam = styled(IoRocketOutline)`
+color: ${(props) => props.theme.colors.light };
+  font-size:4rem;
+`
+
 //Pricing card info
 export const PricingInfo = styled.div`
   display: flex;

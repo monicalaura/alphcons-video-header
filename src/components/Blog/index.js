@@ -1,7 +1,5 @@
 import React from 'react'
-import Blog1 from '../../assets/collaboration-tools.svg'
-import Blog2 from '../../assets/development.svg'
-import Blog3 from '../../assets/ui-design.svg'
+import articles from './data';
 import { BlogContainer, BlogContent, BlogDateContainer, BlogDateItems, BlogImgContainer,BlogImage, BlogReadMoreWrap, BlogTop, BlogDescription, BlogTopSubtitle, BlogTopTextWrap, BlogTopTitle, BlogWrapper, BlogReadMoreLink, BlogReadMoreIcon, BlogTitle } from './BlogComponents'
 
 const Blog = () => {
@@ -11,80 +9,35 @@ const Blog = () => {
              <BlogTitle>From Blog</BlogTitle>
              <BlogContainer>
                  {/* Blog card */}
-                <BlogContent>
-                    <BlogImgContainer>
-                     <BlogImage src={Blog1}></BlogImage>
-                    </BlogImgContainer>
-                    
-                    <BlogTop>
-                        <BlogDateContainer>
-                            <BlogDateItems>10</BlogDateItems>
-                            <BlogDateItems dark>Oct</BlogDateItems>
-                        </BlogDateContainer>
-                        <BlogTopTextWrap>
-                            <BlogTopTitle>Collaboration Tools</BlogTopTitle>
-                            <BlogTopSubtitle>Software</BlogTopSubtitle>
-                        </BlogTopTextWrap> 
-                        </BlogTop>   
-                            <BlogDescription>Aenean eu magna ut quam rhoncus pretium praesent sit amet lorem.
-                             <BlogReadMoreWrap>
-                                <BlogReadMoreLink>
-                                    Read more 
-                                    <BlogReadMoreIcon></BlogReadMoreIcon>
-                                </BlogReadMoreLink>
-                             </BlogReadMoreWrap>
-                            </BlogDescription>                
-                </BlogContent> 
-                {/* Blog card */}
-                <BlogContent>
-                    <BlogImgContainer>
-                     <BlogImage src={Blog2}></BlogImage>
-                    </BlogImgContainer>
-                    
-                    <BlogTop>
-                        <BlogDateContainer>
-                            <BlogDateItems>24</BlogDateItems>
-                            <BlogDateItems dark>Sept</BlogDateItems>
-                        </BlogDateContainer>
-                        <BlogTopTextWrap>
-                            <BlogTopTitle>Updates to Drupal </BlogTopTitle>
-                            <BlogTopSubtitle>Development</BlogTopSubtitle>
-                        </BlogTopTextWrap> 
-                        </BlogTop>   
-                            <BlogDescription>Aenean eu magna ut quam rhoncus pretium praesent sit amet lorem.
-                             <BlogReadMoreWrap>
-                                <BlogReadMoreLink>
-                                    Read more 
-                                    <BlogReadMoreIcon></BlogReadMoreIcon>
-                                </BlogReadMoreLink>
-                             </BlogReadMoreWrap>
-                            </BlogDescription>                
-                </BlogContent>
-                {/* Blog card */}
-                <BlogContent>
-                    <BlogImgContainer>
-                     <BlogImage src={Blog3}></BlogImage>
-                    </BlogImgContainer>
-                    
-                    <BlogTop>
-                        <BlogDateContainer>
-                            <BlogDateItems>11</BlogDateItems>
-                            <BlogDateItems dark>Aug</BlogDateItems>
-                        </BlogDateContainer>
-                        <BlogTopTextWrap>
-                            <BlogTopTitle>Latest UX Design</BlogTopTitle>
-                            <BlogTopSubtitle>UI/UX Design</BlogTopSubtitle>
-                        </BlogTopTextWrap> 
-                        </BlogTop>   
-                            <BlogDescription>Aenean eu magna ut quam rhoncus pretium praesent sit amet lorem.
-                             <BlogReadMoreWrap>
-                                <BlogReadMoreLink>
-                                    Read more 
-                                    <BlogReadMoreIcon></BlogReadMoreIcon>
-                                </BlogReadMoreLink>
-                             </BlogReadMoreWrap>
-                            </BlogDescription>                
-                </BlogContent>
+                 {articles.map((article)=> {
+                     const {id, img, day, month, title, subtitle,description} = article
+                     return <BlogContent key={id}>
+                     <BlogImgContainer>
+                      <BlogImage src={img}></BlogImage>
+                     </BlogImgContainer>
+                     
+                     <BlogTop>
+                         <BlogDateContainer>
+                             <BlogDateItems>{day}</BlogDateItems>
+                             <BlogDateItems dark>{month}</BlogDateItems>
+                         </BlogDateContainer>
+                         <BlogTopTextWrap>
+                             <BlogTopTitle>{title}</BlogTopTitle>
+                             <BlogTopSubtitle>{subtitle}</BlogTopSubtitle>
+                         </BlogTopTextWrap> 
+                         </BlogTop>   
+                             <BlogDescription>{description}
+                              <BlogReadMoreWrap>
+                                 <BlogReadMoreLink>
+                                     Read more 
+                                     <BlogReadMoreIcon></BlogReadMoreIcon>
+                                 </BlogReadMoreLink>
+                              </BlogReadMoreWrap>
+                             </BlogDescription>                
+                 </BlogContent> 
+                 })}
+                
+               
              </BlogContainer>
          </BlogWrapper>   
         </>

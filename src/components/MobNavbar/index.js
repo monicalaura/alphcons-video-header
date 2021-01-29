@@ -25,9 +25,9 @@ const MobNavbar = ({isOpen, toggleNav}) => {
                  smooth={true}
                  spy={true}
                  duration={700}>
-                      Home
+                      Home  {/* your menu item comes here */}
                     </MobNavLink>
-                    <MobNavLink to="e-marketing" onClick={toggleNav}
+                    <MobNavLink to="features" onClick={toggleNav}
                      smooth={true}
                      spy={true}
                      duration={700}>

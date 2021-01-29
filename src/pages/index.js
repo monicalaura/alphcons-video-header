@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 import Navbar from '../components/Navbar'
 import MobNavbar from '../components/MobNavbar'
-//import Hero from '../components/Hero';
-import HeroStatic from '../components/HeroStatic';
+import Hero from '../components/Hero';
+//import HeroStatic from '../components/HeroStatic';
 //import HeroAnimated from '../components/HeroAnimated';
-import FeaturesData from '../components/FeaturesData';
-import { FeaturesDataOne, FeaturesDataTwo, FeaturesDataThree } from '../components/FeaturesData/Data';
+import Features from '../components/Features';
 import Services from '../components/Services';
 import Projects from '../components/Projects';
 import Action from '../components/Action';
@@ -15,7 +14,7 @@ import Blog from '../components/Blog'
 import Contact from '../components/Contact'
 import  Footer  from '../components/Footer';
 
-//page that centralizes all components
+//page that renders all the components
 
 const Home = () => {   
     //mobile navbar state
@@ -30,13 +29,10 @@ const Home = () => {
         <>
       <Navbar toggleNav ={toggleNav} />
       <MobNavbar isOpen={isOpen} toggleNav ={toggleNav} /> 
-       {/* <Hero /> */} 
-      <HeroStatic /> 
+       <Hero />  
+      {/* <HeroStatic /> */} 
       {/* <HeroAnimated /> */}
-      {/* Spread out the objects from Data.js */}
-      <FeaturesData {...FeaturesDataOne} /> 
-      <FeaturesData {...FeaturesDataTwo} /> 
-      <FeaturesData {...FeaturesDataThree} /> 
+      <Features />
       <Services />
       <Projects />
       <Action />

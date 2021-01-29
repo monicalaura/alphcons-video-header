@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import items from './data';
 import { FilterItem, 
         FilterLink, 
         FilterList, 
@@ -14,32 +15,6 @@ import { FilterItem,
                } from "./ProjectsComponents";
 
 //PORTFOLIO filtered gallery
-
-const items = [
-    {
-      name: "Web Development",
-      image: 'https://svgshare.com/i/Stz.svg',
-      category: ["all", "design", "development"]
-    },
-    
-    {
-      name: "SEO Analytics",
-      image: 'https://svgshare.com/i/Snx.svg',
-      category: ["all", "seo"]
-    },
-  
-    {
-      name: "UI/UX Design",
-      image: 'https://svgshare.com/i/StS.svg',
-      category: ["all", "design", "development"]
-    },
-  
-    {
-      name: "E-marketing",
-      image: 'https://svgshare.com/i/Sny.svg',
-      category: ["all", "marketing", "seo"]
-    }
-  ];
 
 const Projects = () => {
 //filter state

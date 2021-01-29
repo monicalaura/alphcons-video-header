@@ -33,11 +33,11 @@ const Navbar = ({toggleNav}) => {
                             smooth={true}
                             spy={true}
                             duration={700}>
-                                Home
+                                Home  {/* your own menu item here */}
                             </MenuLink> 
                       </MenuItem>
                       <MenuItem>
-                            <MenuLink to ="e-marketing" 
+                            <MenuLink to ="features" 
                             smooth={true}
                             spy={true}
                             duration={700}>

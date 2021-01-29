@@ -24,6 +24,11 @@ export const ActionWrapper = styled.section`
         padding-top:3rem;
     }
     `
+//Action container
+export const ActionContainer = styled.div`
+width:100%;
+`
+
 //Action tagline
 export const ActionTitle = styled.h1`
 color: ${(props) => props.theme.colors.light};

@@ -17,7 +17,8 @@ e.g. color: ${(props) => props.theme.colors.dark}; */
         mutedGrey: 'rgba(200,200,200, 0.9)',
         darkGreen: '#15b5ab',
         midGreen: '#18e0d3',
-        lightGreen: '#8bf0e9'
+        lightGreen: '#8bf0e9',
+        error: '#F5271A'
     },
 
     fontSizes: {

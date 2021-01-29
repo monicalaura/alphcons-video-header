@@ -1,9 +1,5 @@
 import React from 'react'
-import {RiSendPlane2Line} from 'react-icons/ri';
-import { IoAirplaneOutline } from "react-icons/io5";
-import { IoRocketOutline } from "react-icons/io5";
-import { IconContext } from 'react-icons/lib';
-
+import cards from './data';
 import {
     PricingBtn,
     PricingCard,
@@ -16,7 +12,10 @@ import {
     PricingSingleFeature,
     PricingTitle,
     PricingWrapper,
-    PricingContainer
+    PricingContainer,
+    IconEssential, 
+    IconPremium, 
+    IconTeam
 } from './PricingComponents'
 
 //PRICING component
@@ -25,61 +24,41 @@ const Pricing = () => {
     return (
         <>
     {/* IconContextProvider allows us to set custom values on the icons */}
-    <IconContext.Provider value={{ color: "#FFFFFF", size: 60 }}>
       <PricingWrapper id="pricing">
        <PricingTitle>Pricing Plans</PricingTitle>
-        <PricingContainer>        
-            <PricingCard to='/sign-up'>
+        <PricingContainer>
+         {/*  map through the cards array */} 
+        {cards.map((card) => {
+                   const {id, icon, plan, cost, period, features} = card;
+            return <PricingCard to='/sign-up' key={id}>
               <PricingInfo>
                 <PricingIcon>
-                  <RiSendPlane2Line />
-                </PricingIcon>
-                <PricingPlan>Essential</PricingPlan>
-                <PricingCost>$ 20</PricingCost>
-                <PricingPeriod>per month</PricingPeriod>
-                <PricingFeatures>
-                  <PricingSingleFeature>100 Lectus Est</PricingSingleFeature>
-                  <PricingSingleFeature>Semper quam</PricingSingleFeature>
-                  <PricingSingleFeature>Magna enim eget</PricingSingleFeature>
+
+                  {/* conditionally render the react icons. You can modify them in PricingComponents */}
+                    {icon ==='essential' && <IconEssential></IconEssential>}
+                    {icon ==='premium' && <IconPremium></IconPremium>}
+                    {icon ==='team' && <IconTeam></IconTeam>}  
+
+                  </PricingIcon>
+                  <PricingPlan>{plan}</PricingPlan>
+                  <PricingCost>$ {cost}</PricingCost>
+                  <PricingPeriod>{period}</PricingPeriod>
+                  <PricingFeatures>
+                    {/* map through the features subarray */}
+                    {features.map((feature) => {
+                      const {id, name} = feature;
+                     return <PricingSingleFeature key={id}>{name}</PricingSingleFeature>
+                    })}
+                                       
                 </PricingFeatures>
-                <PricingBtn primary>Choose Plan</PricingBtn>
+                <PricingBtn>Choose Plan</PricingBtn>
               </PricingInfo>
             </PricingCard>
-            <PricingCard to='/sign-up'>
-              <PricingInfo>
-                <PricingIcon>
-                  <IoAirplaneOutline />
-                </PricingIcon>
-                <PricingPlan>Premium</PricingPlan>
-                <PricingCost>$ 250</PricingCost>
-                <PricingPeriod>per month</PricingPeriod>
-                <PricingFeatures>
-                  <PricingSingleFeature>500 Lectus Est</PricingSingleFeature>
-                  <PricingSingleFeature>Qui condimentum</PricingSingleFeature>
-                  <PricingSingleFeature>Magna enim eget</PricingSingleFeature>
-                </PricingFeatures>
-                <PricingBtn primary>Choose Plan</PricingBtn>
-              </PricingInfo>
-            </PricingCard>
-            <PricingCard to='/sign-up'>
-              <PricingInfo>
-                <PricingIcon>
-                  <IoRocketOutline />
-                </PricingIcon>
-                <PricingPlan>Team</PricingPlan>
-                <PricingCost>$ 800</PricingCost>
-                <PricingPeriod>per month</PricingPeriod>
-                <PricingFeatures>
-                  <PricingSingleFeature>Unlimited Placerat</PricingSingleFeature>
-                  <PricingSingleFeature>Unlimited Lectus Est</PricingSingleFeature>
-                  <PricingSingleFeature>24/7 Support</PricingSingleFeature>
-                </PricingFeatures>
-                <PricingBtn primary>Choose Plan</PricingBtn>
-              </PricingInfo>
-            </PricingCard>
+              })}          
+
         </PricingContainer>
       </PricingWrapper>
-    </IconContext.Provider>  
+  
         </>
     )
 }

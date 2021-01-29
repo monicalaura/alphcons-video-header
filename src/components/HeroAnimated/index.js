@@ -1,13 +1,12 @@
 import React, {useState} from 'react'
-import {Button} from '../ButtonComponent';
 import { HeroAnimWrapper,
          HeroAnimInfo,
          HeroAnimTagline,
          HeroAnimText,
+         AnimatedHeroBtn,
          HeroAnimBtnContainer,
          ArrowDown,
          ArrowForward } from './HeroAnimatedComponents';
-
 
 
 const HeroAnimAnimated = () => {
@@ -36,11 +35,10 @@ const HeroAnimAnimated = () => {
               transition={{ type: "spring", duration: 0.5 }}>
                    Web design, digital marketing and custom web applications</HeroAnimText>
               <HeroAnimBtnContainer>
-                  <Button to='e-marketing' 
+                  <AnimatedHeroBtn to='e-marketing' 
                           onMouseEnter={handleHover} 
                           onMouseLeave={handleHover}
-                /*  here you customize the button props (see ButtonComponent)  */    
-                          primary large
+                
                 /* here you customize the values of smooth scroll for button  */   
                           smooth={true} 
                           spy={true}
@@ -48,7 +46,7 @@ const HeroAnimAnimated = () => {
                           duration={700}>
                     {/* toggle between the 2 arrows */}
                      More info {hover ? <ArrowDown /> : <ArrowForward />} 
-                  </Button>
+                  </AnimatedHeroBtn>
               </HeroAnimBtnContainer>
           </HeroAnimInfo>
       </HeroAnimWrapper>

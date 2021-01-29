@@ -1,12 +1,12 @@
 import React, {useState} from 'react'
 import Video from './../../assets/video-hero.mp4';
-import {Button} from '../ButtonComponent';
 import { HeroWrapper,
          HeroBcg, 
          HeroVideo,
          HeroInfo,
          HeroTagline,
          HeroText,
+         HeroBtn,
          HeroBtnContainer,
          ArrowDown,
          ArrowForward } from './HeroComponents';
@@ -33,11 +33,10 @@ const Hero = () => {
                 <HeroTagline>Building web solutions that fit your needs</HeroTagline>
                 <HeroText> Web design, digital marketing and custom web applications</HeroText>
                 <HeroBtnContainer>
-                    <Button to='e-marketing' 
+                    <HeroBtn to='features' 
                             onMouseEnter={handleHover} 
                             onMouseLeave={handleHover}
-                  /*  here you customize the button props (see ButtonComponent)  */    
-                            primary large
+                  
                   /* here you customize the values of smooth scroll for button  */   
                             smooth={true} 
                             spy={true}
@@ -45,7 +44,7 @@ const Hero = () => {
                             duration={700}>
                       {/* toggle between the 2 arrows */}
                        More info {hover ? <ArrowDown /> : <ArrowForward />} 
-                    </Button>
+                    </HeroBtn>
                 </HeroBtnContainer>
             </HeroInfo>
         </HeroWrapper>

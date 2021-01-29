@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link as LinkScroll} from 'react-scroll';
 import { MdArrowDownward, MdArrowForward } from "react-icons/md";
 import BckImg from '../../assets/contact.jpg'
 
@@ -27,8 +28,6 @@ export const HeroStaticWrapper = styled.div`
         right:0;
         bottom:0;
         }
-
-
 `;
 
 //Hero container
@@ -39,7 +38,6 @@ export const HeroStaticContainer = styled.div`
   max-width: 1300px;  
   padding-right: 3.5rem;
   padding-left: 3.5rem;
-
   
   @media screen and (max-width: 990px) {
     padding-right: 2.5rem;
@@ -54,7 +52,6 @@ export const HeroStaticRow = styled.div`
   flex-direction: row;
   margin: 0 -1.3rem -1.3rem -1.3rem;
   z-index:1;
-
   @media screen and (max-width: 768px) {
       flex-direction:column;
   }
@@ -118,7 +115,6 @@ export const Image = styled.img`
   vertical-align: middle;
   display: inline-block;
   border: 0;
-
   @media screen and (max-width: 768px) {
     margin-top:4rem
   } 
@@ -130,7 +126,6 @@ export const Title = styled.h1`
   font-size: ${(props) => props.theme.fontSizes.title};
   line-height: 1.1;
   font-weight: 500;
-
   @media screen and (max-width: 768px) {
     font-size: ${(props) => props.theme.fontSizes.large};
   }
@@ -143,7 +138,6 @@ export const Subtitle = styled.p`
   font-size: ${(props) => props.theme.fontSizes.mediumLarge};
   color: ${(props) => props.theme.colors.light};
   line-height: 2.7rem;
-
   @media screen and (max-width: 768px) {
     font-size: ${(props) => props.theme.fontSizes.medium};
     margin-bottom: 1.5rem;
@@ -151,14 +145,35 @@ export const Subtitle = styled.p`
   
 `;
 
-//more info button
+//hero btn
+export const StaticHeroBtn = styled(LinkScroll)`
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    background:${(props) => props.theme.colors.darkGreen};
+    color:${(props) => props.theme.colors.light};
+    margin-top: ${({margin}) => (margin ? '2.7rem' : '1.7rem')};
+    margin-bottom:1rem;
+    padding:1.1rem 2.2rem;
+    border-radius:${(props) => props.theme.radius.halfRound};
+    font-size: ${(props) => props.theme.fontSizes.small};
+    transition:${(props) => props.theme.transitions.inOut};
+    border:none;
+    outline:none;
+    cursor:pointer;
+
+    &:hover{
+        background: ${(props) => props.theme.colors.midGreen};
+        color:${(props) => props.theme.colors.dark};
+    }
+`
+
+//more info button container
 export const HeroBtnContainer = styled.div` 
     max-width:15rem; 
-
     @media screen and (max-width: 768px) {
         align-items:center
     }   
-
 `
 
 //arrow down icon
@@ -167,13 +182,11 @@ export const ArrowDown = styled(MdArrowDownward)`
     color:  ${(props) => props.theme.colors.light};
     margin-left: 0.5rem;
     margin-top:0.3rem;
-
 `
 //arrow forward icon
 export const ArrowForward = styled(MdArrowForward)`
     font-size: ${(props) => props.theme.fontSizes.small};
     color:  ${(props) => props.theme.colors.light};
     margin-left: 0.5rem;
-    margin-top:0.3rem;
-
+    margin-top:0.2rem;
 `
