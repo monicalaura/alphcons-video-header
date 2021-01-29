@@ -111,7 +111,7 @@ export const HeroBtn = styled(LinkScroll)`
     margin-bottom:1rem;
     padding:1.1rem 1.7rem;
     border-radius:${(props) => props.theme.radius.halfRound};
-    font-size: ${(props) => props.theme.fontSizes.small};
+    font-size: ${(props) => props.theme.fontSizes.medium};
     transition:${(props) => props.theme.transitions.inOut};
     border:none;
     outline:none;
@@ -127,7 +127,7 @@ export const ArrowDown = styled(MdArrowDownward)`
     font-size: ${(props) => props.theme.fontSizes.small};
     color:  ${(props) => props.theme.colors.light};
     margin-left: 0.5rem;
-    margin-top:0.3rem;
+    margin-top:0.4rem;
 
 `
 //arrow forward icon
@@ -135,6 +135,6 @@ export const ArrowForward = styled(MdArrowForward)`
     font-size: ${(props) => props.theme.fontSizes.small};
     color:  ${(props) => props.theme.colors.light};
     margin-left: 0.5rem;
-    margin-top:0.3rem;
+    margin-top:6px;
 
 `
