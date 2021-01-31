@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import {Link as LinkScroll} from 'react-scroll';
 import { MdArrowDownward, MdArrowForward } from "react-icons/md";
-import BckImg from '../../assets/contact.jpg'
+import BckImg from '../../assets/contact.jpg';
+import {ToggleHeroBtnContainer } from '../Hero/HeroComponents';
 
 
 //hero wrapper
@@ -189,4 +190,9 @@ export const ArrowForward = styled(MdArrowForward)`
     color:  ${(props) => props.theme.colors.light};
     margin-left: 0.5rem;
     margin-top:0.2rem;
+`
+export const HeroStaticToggleContainer = styled(ToggleHeroBtnContainer)`
+ width:300px;
+ margin-top:4rem;
+
 `

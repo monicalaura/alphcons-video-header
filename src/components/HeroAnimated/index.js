@@ -9,7 +9,7 @@ import { HeroAnimWrapper,
          ArrowDown,
          ArrowForward } from './HeroAnimatedComponents';
 
- import {ToggleHeroBtnContainer, ToggleHeroBtn } from '../../components/Hero/HeroComponents';       
+ import {ToggleHeroBtnContainer, ToggleHeroBtn } from '../Hero/HeroComponents';       
 
 
 const HeroAnimAnimated = () => {
