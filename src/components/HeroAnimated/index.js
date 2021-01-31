@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react';
+import HeroContext from '../../HeroContext';
 import { HeroAnimWrapper,
          HeroAnimInfo,
          HeroAnimTagline,
@@ -7,6 +8,8 @@ import { HeroAnimWrapper,
          HeroAnimBtnContainer,
          ArrowDown,
          ArrowForward } from './HeroAnimatedComponents';
+
+ import {ToggleHeroBtnContainer, ToggleHeroBtn } from '../../components/Hero/HeroComponents';       
 
 
 const HeroAnimAnimated = () => {
@@ -17,6 +20,10 @@ const HeroAnimAnimated = () => {
   const handleHover = () => {
     setHover(!hover)
   }
+
+  //useContext - switch to the other two heros
+  const { switchToVideoHero, switchToStaticHero } = useContext(HeroContext);
+
 
   return (
       <HeroAnimWrapper id="home">
@@ -48,6 +55,11 @@ const HeroAnimAnimated = () => {
                      More info {hover ? <ArrowDown /> : <ArrowForward />} 
                   </AnimatedHeroBtn>
               </HeroAnimBtnContainer>
+              {/* delete the ToggleHeroBtnContainer code if you don't want to switch heros buttons */}
+              <ToggleHeroBtnContainer>
+                    <ToggleHeroBtn onClick={switchToVideoHero}>Video Hero</ToggleHeroBtn>
+                    <ToggleHeroBtn onClick={switchToStaticHero}>Static Hero</ToggleHeroBtn>
+              </ToggleHeroBtnContainer> 
           </HeroAnimInfo>
       </HeroAnimWrapper>
   )

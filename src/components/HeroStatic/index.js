@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react';
+import HeroContext from '../../HeroContext';
 import HeroImg from './../../assets/hero.svg';
 import { HeroStaticColumn, HeroStaticRow, HeroStaticWrapper, HeroStaticContainer, Subtitle, TextContainer, Title, TopText, StaticHeroBtn, HeroBtnContainer, ArrowDown, ArrowForward, ImgContainer, Image } from './HeroStaticComponents';
-
+import {ToggleHeroBtnContainer, ToggleHeroBtn } from '../../components/Hero/HeroComponents';
 
 const HeroStatic = () => {
     // button hover state, toggle between ArrowDown and ArrowForward
@@ -11,6 +12,9 @@ const HeroStatic = () => {
     const handleHover = () => {
       setHover(!hover)
     }
+
+    //useContext - switch to the other two heros
+  const { switchToVideoHero, switchToAnimatedHero } = useContext(HeroContext);
 
     return (
         
@@ -37,7 +41,11 @@ const HeroStatic = () => {
                       {/* toggle between the 2 arrows */}
                        More info {hover ? <ArrowDown /> : <ArrowForward />} 
                     </StaticHeroBtn>
-                    
+                    {/* delete the ToggleHeroBtnContainer code if you don't want to switch heros buttons */}
+              <ToggleHeroBtnContainer>
+                    <ToggleHeroBtn onClick={switchToVideoHero}>Video Hero</ToggleHeroBtn>
+                    <ToggleHeroBtn onClick={switchToAnimatedHero}>Animated Hero</ToggleHeroBtn>
+              </ToggleHeroBtnContainer> 
                 </HeroBtnContainer>
                  </HeroStaticColumn>
                  <HeroStaticColumn>

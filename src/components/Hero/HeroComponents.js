@@ -138,3 +138,42 @@ export const ArrowForward = styled(MdArrowForward)`
     margin-top:6px;
 
 `
+
+//toggle hero button container
+export const ToggleHeroBtnContainer = styled.div`
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ justify-content:space-around;
+ width:30%;
+ margin-top:3rem;
+
+ @media screen and (max-width: 1040px){
+        flex-direction:column;
+        width:100%;
+    }
+ 
+`
+
+//toggle heros button
+export const ToggleHeroBtn = styled.button`
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    background:transparent;
+    color:${(props) => props.theme.colors.light};
+    margin-top: ${({margin}) => (margin ? '2.7rem' : '1.7rem')};
+    margin-bottom:1rem;
+    padding:.9rem 1.3rem;
+    border: 1px solid ${(props) => props.theme.colors.midGreen};
+    border-radius:${(props) => props.theme.radius.square};
+    font-size: ${(props) => props.theme.fontSizes.smaller};
+    transition:${(props) => props.theme.transitions.inOut};
+    outline:none;
+    cursor:pointer;
+
+    &:hover{
+        background: ${(props) => props.theme.colors.darkGreen};
+        color:${(props) => props.theme.colors.light};
+    }
+`
