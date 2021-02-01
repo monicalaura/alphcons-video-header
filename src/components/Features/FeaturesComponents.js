@@ -5,8 +5,7 @@ import styled from 'styled-components';
 //Features general wrapper
 export const FeaturesWrapper = styled.section`
     width:100%;
-    margin-bottom:3rem;
-  
+    margin-bottom:3rem; 
     
 `
 
@@ -66,7 +65,7 @@ export const Col2 = styled.div`
     grid-area:col2;
     
     @media screen and (max-width:768px){
-        padding:1.2rem;
+        padding:1rem;
         margin:0;
 
     }
@@ -75,7 +74,7 @@ export const Col2 = styled.div`
 export const TextContainer = styled.div`
     max-width:600px;
     padding-top: 0;
-    padding-bottom:4.5rem;
+    
    
 `
 //upper text
@@ -124,7 +123,9 @@ export const Description = styled.p`
 //more info button
 export const BtnContainer = styled.div`
     display:flex;
-    justify-content:flex-start;    
+    justify-content:flex-start; 
+
+   
     
 `
 //image container
