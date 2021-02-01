@@ -146,5 +146,9 @@ export const PricingBtn = styled(Button)`
  @media screen and (max-width:768px) {
   padding: 1rem 1.2rem;
  }
+ @media screen and (max-width:400px) {
+  padding: .9rem;
+  font-size:11px;
+ }
 
 `
