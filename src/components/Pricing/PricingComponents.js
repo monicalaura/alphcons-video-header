@@ -141,6 +141,10 @@ export const PricingSingleFeature = styled.li`
 //Pricing button
 export const PricingBtn = styled(Button)`
  padding: 1rem 1.4rem;
- margin-top:1.5rem
+ margin-top:1.5rem;
+
+ @media screen and (max-width:768px) {
+  padding: 1rem 1.2rem;
+ }
 
 `
