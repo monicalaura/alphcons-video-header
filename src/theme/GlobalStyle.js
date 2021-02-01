@@ -14,7 +14,7 @@ import  { createGlobalStyle } from 'styled-components';
 
 html  {
     height:100%;
-    overflow:hidden
+    
 }
 
 
