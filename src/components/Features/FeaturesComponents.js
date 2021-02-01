@@ -6,6 +6,8 @@ import styled from 'styled-components';
 export const FeaturesWrapper = styled.section`
     width:100%;
     margin-bottom:3rem;
+  
+    
 `
 
 
@@ -23,8 +25,7 @@ export const FeaturesDataContainer = styled.div`
     background: ${({lightBcg}) => (lightBcg ? '#ffffff' : '#010203')};
 
     @media screen and (max-width:768px){
-        //padding:0 1rem
-        padding: 2rem 0;
+        padding: 2rem;
     }
 
 `

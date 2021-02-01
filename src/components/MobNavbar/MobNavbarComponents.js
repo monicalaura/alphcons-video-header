@@ -11,8 +11,9 @@ export const MobNavbarWrapper = styled.aside`
     width:100%;
     height:100%;
     background: ${(props) => props.theme.colors.dark };
-    display:grid;
+    display:flex;
     align-items:center;
+    justify-content:center;
     left:0;
     transition:${(props) => props.theme.transitions.inOut};
     opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
@@ -43,13 +44,16 @@ export const MobNavContainer = styled.div`
 
 //div of mobile menu items
 export const MobNavMenu = styled.div`
-    display:grid;
+    /* display:grid;
     grid-template-columns:1fr;
-    grid-template-rows:repeat(3, 3rem);
+    grid-template-rows:repeat(3, 3rem); */
+    display:flex;
+    flex-direction:column;
+    
     text-align: center;
 
     @media screen and (max-width: 480px){
-        grid-template-rows:repeat(3, 3rem);
+        
 
     }
 `

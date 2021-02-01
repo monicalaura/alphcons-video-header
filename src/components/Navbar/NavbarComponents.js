@@ -31,10 +31,7 @@ export const NavbarWrapper = styled.div`
     max-width: 1300px;
     z-index:1;
 
-    // small and medium screens
-@media screen and (max-width:960px) {
-    justify-content:center;
-}
+    
 
 `
 //customise the Link coming from react-router
