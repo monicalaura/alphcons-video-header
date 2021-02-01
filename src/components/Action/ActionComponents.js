@@ -21,7 +21,8 @@ export const ActionWrapper = styled.section`
     background-attachment:fixed;
 
     @media screen and (max-width:768px) {
-        padding-top:3rem;
+        padding:3rem 1rem 0 1rem;
+        
     }
     `
 //Action container
