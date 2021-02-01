@@ -38,8 +38,8 @@ const Hero = () => {
                 </HeroVideo>
             </HeroBcg>
             <HeroInfo>
-                <HeroTagline>Building web solutions that fit your needs</HeroTagline>
-                <HeroText> Web design, digital marketing and custom web applications</HeroText>
+                <HeroTagline>Responsive ReactJs One Page Template</HeroTagline>
+                <HeroText> Built with ReactJs, styled components, react-router, smooth scroll, framer animation, and much more</HeroText>
                 <HeroBtnContainer>
                     <HeroBtn to='features' 
                             onMouseEnter={handleHover} 

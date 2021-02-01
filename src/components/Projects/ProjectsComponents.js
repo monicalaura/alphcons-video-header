@@ -119,7 +119,11 @@ export const ProjectCard = styled.div`
         cursor:pointer;
     }
 
-`
+    @media screen and (max-width: 768px) {
+      justify-content:center;    
+    }
+
+    `
 //Portfolio project image
 export const ProjectImage = styled.img`
     width:100%;
@@ -131,6 +135,11 @@ export const ProjectImage = styled.img`
     -ms-transition: transform 4s;
     -o-transition: transform 4s;
     transition:transform 4s;
+
+    @media screen and (max-width: 768px) {
+       height:auto;
+       margin:0 auto    
+    }
 `
 
 //Portfolio project image overlay text
@@ -196,6 +205,11 @@ export const ProjectItem = styled.article`
     &:hover ${ImgText} {
         opacity:1;
 
+  }
+
+  @media screen and (max-width: 768px) {
+       padding:0.5rem;
+       
 }
 `
 

@@ -8,7 +8,10 @@ import  { createGlobalStyle } from 'styled-components';
  *{
  box-sizing: border-box;
  font-family: "IBM Plex Sans",sans-serif;
+ padding: 0;
+ margin: 0
  }
+
 html  {
     height:100%;
 }
@@ -16,12 +19,13 @@ html  {
 
 body {
     overflow-x: hidden;
+
+    @media screen and (max-width: 768px) {
+    padding: 0 1rem 0 2rem;
+  }
 }
 
-* {
-    padding: 0;
-    margin: 0
-}
+
 
 p {
     line-height: 1.8;
