@@ -30,7 +30,7 @@ const Pricing = () => {
          {/*  map through the cards array */} 
         {cards.map((card) => {
                    const {id, icon, plan, cost, period, features} = card;
-            return <PricingCard to='/sign-up' key={id}>
+            return <PricingCard key={id}>
               <PricingInfo>
                 <PricingIcon>
 

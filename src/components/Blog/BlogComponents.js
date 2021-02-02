@@ -81,8 +81,10 @@ padding:3.5rem 1.5rem 0 1.5rem;
 `
 //Blog image
 export const BlogImage = styled.img`
+    width:350px;
     max-width: 100%;
     height: auto;
+    margin:0 auto;
     
 `
 

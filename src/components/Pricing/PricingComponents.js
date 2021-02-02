@@ -101,7 +101,8 @@ export const PricingInfo = styled.div`
         color: ${(props) => props.theme.colors.lightGreen };
     }
 
-  @media screen and (max-width: 768px) {
+
+  @media screen and (min-width: 768px) and (max-width: 1300px)  {
     padding: 0 1rem 0 1rem;
   }
 `
@@ -118,6 +119,10 @@ export const PricingPlan = styled.h3`
 //Pricing plan cost
 export const PricingCost = styled.h4`
  font-size: ${(props) => props.theme.fontSizes.large};
+
+ @media screen and (max-width:1300px) {
+  font-size: ${(props) => props.theme.fontSizes.medium};
+ }
  
 `
 //Pricing plan period
@@ -149,6 +154,13 @@ export const PricingBtn = styled(Button)`
  @media screen and (max-width:400px) {
   padding: .9rem;
   font-size:10px;
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1300px)  {
+   padding:1.1rem;
+   font-size: ${(props) => props.theme.fontSizes.smaller};
+  
+
  }
 
 `

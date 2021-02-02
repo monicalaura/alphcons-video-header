@@ -69,7 +69,7 @@ const cards = [
             },
             {
                 id:12,
-                name:'Unlimited Lectus Est',
+                name:'Unlimited Lectus',
             },
             {
                 id:13,

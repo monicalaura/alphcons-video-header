@@ -42,6 +42,7 @@ export const FeaturesDataRow = styled.div`
     @media screen and (max-width:768px){
         display:flex;
         flex-direction: ${({imgFirst}) => (imgFirst ? 'column-reverse': 'column')};
+        margin-top: .7rem;
 
     }
 `
