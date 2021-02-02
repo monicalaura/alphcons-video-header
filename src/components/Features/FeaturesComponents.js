@@ -25,6 +25,7 @@ export const FeaturesDataContainer = styled.div`
 
     @media screen and (max-width:768px){
         padding: 2rem;
+        height:auto;
     }
 
 `
@@ -42,7 +43,8 @@ export const FeaturesDataRow = styled.div`
     @media screen and (max-width:768px){
         display:flex;
         flex-direction: ${({imgFirst}) => (imgFirst ? 'column-reverse': 'column')};
-        margin-top: .7rem;
+        margin: 0 0 3rem 0;
+       
 
     }
 `
